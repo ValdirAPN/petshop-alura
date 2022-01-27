@@ -1,5 +1,15 @@
 const customExpress = require('./config/customExpress')
+const conexao = require('./infraestrutura/conexao')
 
-const app = customExpress()
+conexao.connect((erro) => {
+    if (erro) {
+        console.log(erro)
+    } else {
+        console.log('Conectado no BD com sucesso')
 
-app.listen(3000, () => console.log('Server is running on port 3000'))
+        const app = customExpress()
+
+        app.listen(3000, () => console.log('Server is running on port 3000'))
+
+    }
+})
