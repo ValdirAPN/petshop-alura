@@ -1,4 +1,4 @@
-# Petsho API
+# Petshop API - Alura
 A Petshop API project that allows you to register appointments and pets, as well as perform listing, changes and delete items.
 
 ## Setup
